@@ -1,4 +1,4 @@
-package com.colak.springtutorial.customvalidator.countryvalidator.validation;
+package com.colak.springtutorial.country.validation;
 
 import jakarta.validation.Constraint;
 import jakarta.validation.Payload;
