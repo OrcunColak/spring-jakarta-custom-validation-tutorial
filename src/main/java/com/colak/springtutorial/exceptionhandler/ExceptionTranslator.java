@@ -33,6 +33,9 @@ public class ExceptionTranslator extends ResponseEntityExceptionHandler {
     //   "balance": 30, // additional information
     //   "cost": 50 // additional information
     // }
+
+    // MethodArgumentNotValidException is thrown when validation fails on a request body (@RequestBody) or a request parameter annotated with @Valid in a Spring MVC controller.
+    // ConstraintViolationException is thrown when validation fails on method parameters annotated with @Validated in a Spring service or controller.
     @ExceptionHandler(ConstraintViolationException.class)
     ProblemDetail handleConstraintViolationException(ConstraintViolationException constraintViolationException) {
         Set<ConstraintViolation<?>> errors = constraintViolationException.getConstraintViolations();
